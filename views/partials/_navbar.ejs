@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/stylesheets/partials.css" />
+<nav>
+    <% if(user) { %>
+        <div class="navbar">
+            <a id="nav-header" class="authlink" href="/users/<%=user._id%>/applications">Job Tracker</a>
+            <div class="nav-links">
+                <a class="authlink" href="/users/<%=user._id%>/applications">Your Applications</a>
+                <a class="authlink" href="/auth/sign-out">Sign Out</a>
+            </div>
+        </div>
+        <% } else { %>
+            <div class="navbar">
+                <h1 id="nav-header">Job Tracker</h1>
+                <div class="nav-links">
+                    <a class="authlink" href="/auth/sign-in">Sign In</a>
+                    <a class="authlink" href="/auth/sign-up">Sign Up</a>
+                </div>
+            </div>
+            <% } %>
+</nav>
